@@ -1,3 +1,4 @@
+alert("Welcome to Simon Says!\n\nRules:\n1. Press START to begin the game.\n2. Watch which color blinks.\n3. Click the same button.\n4. Each round adds a new color.\n5. Repeat the full sequence in order.\n6. If you press the wrong button, the game ends.\n\nGood luck and have fun!");
 
 // 02.
 
@@ -180,4 +181,5 @@ function reset(){
     userSeq = [];
     level = 0;
 }
+
 
