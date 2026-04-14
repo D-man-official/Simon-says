@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  background-color: #011F3F;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(1rem, 3vw, 1.6rem);
+  margin: 0 0 2rem;
+  color: #FEF2BF;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ── game buttons ── */
+.btn {
+  width: clamp(100px, 20vw, 160px);
+  height: clamp(100px, 20vw, 160px);
+  border-radius: 20%;
+  border: 6px solid rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.1s, filter 0.15s;
+}
+.btn:hover  { filter: brightness(1.2); transform: scale(1.04); }
+.btn:active { filter: brightness(1.8); transform: scale(0.96); }
+
+.green  { background-color: #27AE60; }
+.red    { background-color: #E74C3C; }
+.yellow { background-color: #F1C40F; }
+.blue   { background-color: #2980B9; }
+
+.pressed {
+  box-shadow: 0 0 28px rgba(255, 255, 255, 0.6);
+  filter: brightness(1.8);
+  transform: scale(0.96);
+}
+
+/* ── game-over overlay ── */
+.game-over {
+  background-color: rgba(220, 20, 20, 0.932) !important;
+}
+.game-win {
+  background-color: #27AE60 !important;
+}
+
+/* ── start / reset buttons ── */
+.btnn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 11px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s, opacity 0.12s, background 0.12s;
+  letter-spacing: 0.5px;
+}
+.btnn:active { transform: scale(0.95); }
+
+.start {
+  background: #1D9E75;
+  color: #E1F5EE;
+}
+.start:hover { opacity: 0.85; }
+
+.reset {
+  background: #1a3a5e;
+  color: #aac8e8;
+  border: 1px solid #2c5282;
+}
+.reset:hover { background: #1e4676; }
+
+/* ── responsive ── */
+@media (max-width: 400px) {
+  #level-title { font-size: 0.75rem; }
+  .btnn { font-size: 9px; padding: 10px 18px; }
+}
